@@ -1,4 +1,5 @@
 package view;
+import model.Dogs;
 import processing.core.PApplet;
 public class Main extends PApplet{
 
@@ -12,8 +13,10 @@ public class Main extends PApplet{
 		size(500,500);
 	}
 	
+	Dogs dogs;
 	@Override
 	public void setup() {
+		dogs = new Dogs(this);
 		}
 	
 	@Override
@@ -22,6 +25,7 @@ public class Main extends PApplet{
 		System.out.println(mouseX + ","+ mouseY);
 		rectMode(CENTER);
 		saveButton ();
+		dogs.loadText(this);
 		}
 	
 	@Override

@@ -9,8 +9,8 @@ public class Dogs {
 	private String name;
 	private String breed;
 	private String birthday;
-	String text1;
-	String text2;
+	String [] text1;
+	String [] text2;
 	
 	public Dogs (PApplet app) {
 		this.app= app;
@@ -22,7 +22,10 @@ public class Dogs {
 		this.birthday=birthday;
 	
 }
-	public void loadText() {
+	public void loadText(PApplet app) {
+		
+		text1 = app.loadStrings("./imports/TXT1");
+		text2 = app.loadStrings("./imports/TXT2");
 		
 	}
 	
