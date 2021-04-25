@@ -14,6 +14,7 @@ public class ControllerMain {
 	
 	
 	public void sortList () {
+		logic.sortList();
 		
 	}
 

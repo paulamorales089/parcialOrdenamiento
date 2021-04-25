@@ -6,7 +6,8 @@ import processing.core.PApplet;
 public class Main extends PApplet{
 
 	public static void main(String[] args) {	
-		PApplet.main("view.Main");
+		//PApplet.main("view.Main");
+		
 	}
 	
 	int posXButton, posYButton ;
@@ -23,7 +24,7 @@ public class Main extends PApplet{
 	
 	@Override
 	public void setup() {
-		doggy = new Dogs(this);
+		//doggy = new Dogs(this);
 		controller = new ControllerMain(this);
 		
 		// solo de prueba (luego lo borras pendeja)
@@ -41,9 +42,12 @@ public class Main extends PApplet{
 		breedButton ();
 		birthdayButton ();
 		doggy.loadDogsText(this);
-		doggy.separateDogsText();
+		doggy.separateDogsText(this);
 		
-		
+		if (mousePressed){
+			controller.sortList();
+		//	logic.clickZone(this);
+		}
 		
 		}
 	
@@ -51,9 +55,10 @@ public class Main extends PApplet{
 	public void mousePressed() {
 		controller.sortList();
 		// solo de prueba (luego lo borras pendeja)
-		logic.clickZone(this);
+		// logic.clickZone(this);
 		
 	}
+	
 	
 	public void idButton () {
 		stroke (255);
