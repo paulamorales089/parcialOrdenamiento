@@ -5,31 +5,51 @@ import processing.core.PApplet;
 public class Dogs {
 	private PApplet app;
 	private int posXdog, posYdog;
-	private int id;
+	private String id;
 	private String name;
 	private String breed;
 	private String birthday;
-	String [] text1;
-	String [] text2;
+	String [] dog1;
+	String [] dog2;
+	
+	String [] textDogs1;
+	String [] textDogs2;
 	
 	public Dogs (PApplet app) {
 		this.app= app;
-		this.posXdog=posXdog;
-		this.posYdog=posYdog;
-		this.id=id;
-		this.name=name;
-		this.breed=breed;
-		this.birthday=birthday;
+		this.posXdog = posXdog;
+		this.posYdog = posYdog;
+		this.id = id;
+		this.name = name;
+		this.breed = breed;
+		this.birthday = birthday;
 	
 }
-	public void loadText(PApplet app) {
+	public void loadDogsText(PApplet app) {
 		
-		text1 = app.loadStrings("./imports/TXT1");
-		text2 = app.loadStrings("./imports/TXT2");
+		dog1 = app.loadStrings("./imports/TXT1");
+		dog2 = app.loadStrings("./imports/TXT2");
 		
 	}
 	
-	public void separateText() {
+	public void separateDogsText() {
+		for (int i = 0; i < dog1.length; i++) {
+			String[] textDogs1 = dog1[i].split(" ");
+			
+			String id = textDogs1 [0];
+			String name = textDogs1[1];
+		System.out.println(dog1 [0]);
+		}
+		
+		for (int j = 0; j < dog2.length; j++) {
+			String[] textDogs2 = dog2[j].split(" ");
+			
+			if (id == textDogs2[0]) {
+				String breed = textDogs2[1];
+				String birthday = textDogs2[2];
+				//System.out.println(textDogs2 [1]);
+			}
+		}
 		
 	}
 	
