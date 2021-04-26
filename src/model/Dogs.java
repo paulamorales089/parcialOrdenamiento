@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 import processing.core.PApplet;
 
-public class Dogs {
+public class Dogs implements Comparable <Dogs> {
 	private PApplet app;
 	private int posXdog, posYdog;
 	private int id, id2;
@@ -18,7 +18,7 @@ public class Dogs {
 	String [] textDogs2;
 	
 	
-	private LinkedList <Dogs> listDogs;
+//	private LinkedList <Dogs> listDogs;
 	
 	public Dogs (PApplet app, int id, String name, String breed, String birthday) {
 		this.app= app;
@@ -28,55 +28,45 @@ public class Dogs {
 		this.name = name;
 		this.breed = breed;
 		this.birthday = birthday;
-		listDogs = new LinkedList<Dogs>();
+		//listDogs = new LinkedList<Dogs>();
 }
-	public void loadDogsText(PApplet app) {
-		
-		dog1 = app.loadStrings("./imports/TXT1");
-		dog2 = app.loadStrings("./imports/TXT2");
-		
+/*public void loadDogsText(PApplet app) {
+	dog1 = app.loadStrings("./imports/TXT1");
+	dog2 = app.loadStrings("./imports/TXT2");
+}
+public void separateDogsText(PApplet app) {
+	for (int i = 0; i < dog1.length; i++) {
+	String[] textDogs1 = dog1[i].split(" ");
+	id = Integer.parseInt(textDogs1[0]);
+			
+	String id = textDogs1 [0];
+	 name = textDogs1[1];
+	System.out.println(dog1 [0]);
+}
+	for (int j = 0; j < dog2.length; j++) {
+	String[] textDogs2 = dog2[j].split(" ");
+	id2 = Integer.parseInt (textDogs2[0]);
+			
+	if (id == id2) {
+	 breed = textDogs2[1];
+	 birthday = textDogs2[2];
+	//System.out.println(textDogs2 [1]);
+	//listDogs.add (new Dogs (app, id, name, breed, birthday));
 	}
-	
-	public void separateDogsText(PApplet app) {
-		for (int i = 0; i < dog1.length; i++) {
-			String[] textDogs1 = dog1[i].split(" ");
-			
-			id = Integer.parseInt(textDogs1[0]);
-			
-			//String id = textDogs1 [0];
-		/*String*/ name = textDogs1[1];
-		//System.out.println(dog1 [0]);
-		}
-		
-		for (int j = 0; j < dog2.length; j++) {
-			String[] textDogs2 = dog2[j].split(" ");
-			
-			 id2 = Integer.parseInt (textDogs2[0]);
-			
-			if (id == id2) {
-				 breed = textDogs2[1];
-				 birthday = textDogs2[2];
-				//System.out.println(textDogs2 [1]);
-				//listDogs.add (new Dogs (app, id, name, breed, birthday));
-				 
-			}
-		}
-	}
+}
+}*/
 	
 	public void drawDogs (int x, int y) {
-		
-		/*app.text(id, x, y);
+		app.text(id, x, y);
 		app.text(name, x + 60, y);
 		app.text(breed, x + 180, y);
-		app.text(birthday, x + 320, y);*/ 
-
-		app.text("Id:" + id, x, y);
-		app.text("Name:" + name, x, y + 20);
-		app.text("Breed:" + breed, x, y + 40);
-		app.text("Date:" + birthday, x, y + 60);
-		
-		
+		app.text(birthday, x + 320, y);
+			
 	}
+	
+	
+	
+	
 	
 	public int getPosXdog() {
 		return posXdog;
@@ -130,4 +120,15 @@ public class Dogs {
 	public void setBreed(String breed) {
 		this.breed = breed;
 	}
+
+	
+
+	@Override
+	public int compareTo(Dogs nextDogs) {
+		return this.id-nextDogs.getId();
+	}
+
+	
+
+
 }

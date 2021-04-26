@@ -10,6 +10,8 @@ public class ControllerMain {
 	public ControllerMain (PApplet app) {
 		this.app=app;
 		logic = new Logic(app);
+		logic.loadDogsText(app);
+		logic.separateDogsText(app);
 	}
 	
 	
