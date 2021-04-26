@@ -95,8 +95,8 @@ public class Logic {
 	public void sortList () {
 		// id button
 		if(app.mouseX < 100 && app.mouseX >20 && app.mouseY < 80 && app.mouseY > 45){
-			Collections.sort(listDogs);
-			System.out.println("sirve");
+		
+		
 			app.noStroke ();
 			app.fill(255);
 			app.rect(60,60,80,30);
@@ -104,6 +104,9 @@ public class Logic {
 			app.textAlign(app.CENTER);
 			app.textSize(15);
 			app.text("Dog id", 60, 66);
+			
+			Collections.sort(listDogs);
+			System.out.println("sirve");
 			
 			for (int i = 0; i < listDogs.size(); i++) {
 
@@ -207,4 +210,63 @@ public class Logic {
 	public void saveNewText () {
 		
 	}
+	
+	
+	
+	public String[] getDog1() {
+		return dog1;
+	}
+
+	public void setText1(String[] dog1) {
+		this.dog1 = dog1;
+	}
+
+	public String[] getDog2() {
+		return dog2;
+	}
+
+	public void setDog2(String[] dog2) {
+		this.dog2 = dog2;
+	}
+
+	public LinkedList<Dogs> getListDogs() {
+		return listDogs;
+	}
+	public void setListDogs(LinkedList<Dogs> listDogs) {
+		this.listDogs = listDogs;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getBreed() {
+		return breed;
+	}
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+	
+	public String getBirthday() {
+		return birthday;
+	}
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
+	}
+	
+	
+	
+
+	
+	
 }
