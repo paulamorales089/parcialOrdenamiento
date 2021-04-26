@@ -58,9 +58,9 @@ public void separateDogsText(PApplet app) {
 	
 	public void drawDogs (int x, int y) {
 		app.text(id, x, y);
-		app.text(name, x + 60, y);
-		app.text(breed, x + 180, y);
-		app.text(birthday, x + 320, y);
+		app.text(name, x + 110, y);
+		app.text(breed, x + 230, y);
+		app.text(birthday, x + 360, y);
 			
 	}
 	

@@ -63,6 +63,7 @@ public class Logic {
 	
 	public void separateDogsText(PApplet app) {
 		for (int i = 0; i < dog1.length; i++) {
+			
 			String[] textDogs1 = dog1[i].split(" ");
 			
 			id = Integer.parseInt(textDogs1[0]);
@@ -101,6 +102,8 @@ public class Logic {
 		// id button
 		if(app.mouseX < 100 && app.mouseX >20 && app.mouseY < 80 && app.mouseY > 45){
 		
+		Collections.sort(listDogs);
+		System.out.println("sirve");
 		
 			app.noStroke ();
 			app.fill(255);
@@ -110,8 +113,7 @@ public class Logic {
 			app.textSize(15);
 			app.text("Dog id", 60, 66);
 			
-			Collections.sort(listDogs);
-			System.out.println("sirve");
+			
 			
 			for (int i = 0; i < listDogs.size(); i++) {
 
@@ -128,6 +130,9 @@ public class Logic {
 		
 		//name button
 		if(app.mouseX < 220 && app.mouseX >120 && app.mouseY < 80 && app.mouseY > 45){
+			
+			Collections.sort(listDogs, Name);
+			
 			System.out.println("sirve2");
 			app.noStroke ();
 			app.fill(255);
@@ -137,8 +142,19 @@ public class Logic {
 			app.textSize(15);
 			app.text("Dog Name", 171, 66);
 		
+			
+			
+			for (int i = 0; i < listDogs.size(); i++) {
+
+				id = listDogs.get(i).getId();
+				
+				name = listDogs.get(i).getName().toLowerCase();
+				
+				breed = listDogs.get(i).getBreed().toLowerCase();
+				
+				birthday = listDogs.get(i).getBirthday();
 		}
-		
+		}
 		// breed button
 		if(app.mouseX < 340 && app.mouseX >240 && app.mouseY < 80 && app.mouseY > 45){
 			System.out.println("sirve3");

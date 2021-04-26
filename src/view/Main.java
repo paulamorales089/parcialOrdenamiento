@@ -13,7 +13,7 @@ public class Main extends PApplet{
 	int posXButton, posYButton ;
 	@Override
 	public void settings() {
-		size(500,500);
+		size(700,500);
 	}
 	
 	Dogs doggy;
@@ -47,14 +47,13 @@ public class Main extends PApplet{
 		
 		}
 		
-		/*for (int i = 0; i < controller.getDogs().size(); i++) {
+		for (int i = 0; i < controller.listDogs().size(); i++) {
 
-			textSize(15);
+			textSize(15);			
 			
+			controller.listDogs().get(i).drawDogs(60,(60*i)+100); 
 			
-			controller.getDogs().get(i).drawDogs(60,(60*i)+100); 
-			*/
-		//}
+		}
 		
 		
 		}
