@@ -13,6 +13,11 @@ public class Logic {
 	
 	Dogs dogs;
 	private LinkedList <Dogs> listDogs;
+	
+	DogName Name;
+	DogBreed Breed;
+	DogBirthday Date;
+	
 	private int posXdog, posYdog;
 	private int id, id2;
 	private String name;
@@ -113,10 +118,12 @@ public class Logic {
 				id = listDogs.get(i).getId();
 
 				name = listDogs.get(i).getName().toLowerCase();
+				
+				birthday = listDogs.get(i).getBirthday();
 
 				breed = listDogs.get(i).getBreed().toLowerCase();
 
-				birthday = listDogs.get(i).getBirthday();
+				
 		} 
 		
 		//name button

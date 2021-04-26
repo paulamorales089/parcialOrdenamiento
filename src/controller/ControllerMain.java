@@ -22,6 +22,7 @@ public class ControllerMain {
 		logic.sortList();
 		
 	}
+	
 
 	public LinkedList <Dogs> listDogs(){
 		

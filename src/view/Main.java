@@ -47,6 +47,16 @@ public class Main extends PApplet{
 		
 		}
 		
+		/*for (int i = 0; i < controller.getDogs().size(); i++) {
+
+			textSize(15);
+			
+			
+			controller.getDogs().get(i).drawDogs(60,(60*i)+100); 
+			*/
+		//}
+		
+		
 		}
 	
 	@Override
